@@ -401,9 +401,615 @@ enum ImGui_ImplSDL3_MouseCaptureMode { ImGui_ImplSDL3_MouseCaptureMode_Enabled, 
     item="\
  void ImGui_ImplSDL3_SetMouseCaptureMode(ImGui_ImplSDL3_MouseCaptureMode mode);",
     locat="imgui_impl_sdl3:55",
-    re_name="function_re"}}
+    re_name="function_re"},
+  [76]={
+    childs={
+      [1]={
+        item="\
+    VkRenderPass RenderPass;",
+        locat="imgui_impl_vulkan:89",
+        parent=nil,
+        re_name="vardef_re"},
+      [2]={
+        item="\
+    uint32_t Subpass;",
+        locat="imgui_impl_vulkan:92",
+        parent=nil,
+        re_name="vardef_re"},
+      [3]={
+        item="\
+    VkSampleCountFlagBits MSAASamples = {};",
+        locat="imgui_impl_vulkan:93",
+        parent=nil,
+        re_name="vardef_re"},
+      [4]={
+        item="\
+    ImVector<VkDynamicState> ExtraDynamicStates;",
+        locat="imgui_impl_vulkan:94",
+        parent=nil,
+        re_name="vardef_re"},
+      [5]={
+        item="\
+    VkPipelineRenderingCreateInfoKHR PipelineRenderingCreateInfo;",
+        locat="imgui_impl_vulkan:96",
+        parent=nil,
+        re_name="vardef_re"},
+      [6]={
+        item="\
+    VkImageUsageFlags SwapChainImageUsage;",
+        locat="imgui_impl_vulkan:100",
+        parent=nil,
+        re_name="vardef_re"}},
+    item="struct ImGui_ImplVulkan_PipelineInfo\
+{\
+    VkRenderPass RenderPass;\
+    uint32_t Subpass;\
+    VkSampleCountFlagBits MSAASamples = {};\
+    ImVector<VkDynamicState> ExtraDynamicStates;\
+    VkPipelineRenderingCreateInfoKHR PipelineRenderingCreateInfo;\
+    VkImageUsageFlags SwapChainImageUsage;\
+};",
+    locat="imgui_impl_vulkan:86",
+    name="ImGui_ImplVulkan_PipelineInfo",
+    re_name="struct_re"},
+  [77]={
+    childs={
+      [1]={
+        item="\
+    uint32_t ApiVersion;",
+        locat="imgui_impl_vulkan:114",
+        parent=nil,
+        re_name="vardef_re"},
+      [2]={
+        item="\
+    VkInstance Instance;",
+        locat="imgui_impl_vulkan:115",
+        parent=nil,
+        re_name="vardef_re"},
+      [3]={
+        item="\
+    VkPhysicalDevice PhysicalDevice;",
+        locat="imgui_impl_vulkan:116",
+        parent=nil,
+        re_name="vardef_re"},
+      [4]={
+        item="\
+    VkDevice Device;",
+        locat="imgui_impl_vulkan:117",
+        parent=nil,
+        re_name="vardef_re"},
+      [5]={
+        item="\
+    uint32_t QueueFamily;",
+        locat="imgui_impl_vulkan:118",
+        parent=nil,
+        re_name="vardef_re"},
+      [6]={
+        item="\
+    VkQueue Queue;",
+        locat="imgui_impl_vulkan:119",
+        parent=nil,
+        re_name="vardef_re"},
+      [7]={
+        item="\
+    VkDescriptorPool DescriptorPool;",
+        locat="imgui_impl_vulkan:120",
+        parent=nil,
+        re_name="vardef_re"},
+      [8]={
+        item="\
+    uint32_t DescriptorPoolSize;",
+        locat="imgui_impl_vulkan:121",
+        parent=nil,
+        re_name="vardef_re"},
+      [9]={
+        item="\
+    uint32_t MinImageCount;",
+        locat="imgui_impl_vulkan:122",
+        parent=nil,
+        re_name="vardef_re"},
+      [10]={
+        item="\
+    uint32_t ImageCount;",
+        locat="imgui_impl_vulkan:123",
+        parent=nil,
+        re_name="vardef_re"},
+      [11]={
+        item="\
+    VkPipelineCache PipelineCache;",
+        locat="imgui_impl_vulkan:124",
+        parent=nil,
+        re_name="vardef_re"},
+      [12]={
+        item="\
+    ImGui_ImplVulkan_PipelineInfo PipelineInfoMain;",
+        locat="imgui_impl_vulkan:127",
+        parent=nil,
+        re_name="vardef_re"},
+      [13]={
+        item="\
+    ImGui_ImplVulkan_PipelineInfo PipelineInfoForViewports;",
+        locat="imgui_impl_vulkan:128",
+        parent=nil,
+        re_name="vardef_re"},
+      [14]={
+        item="\
+    bool UseDynamicRendering;",
+        locat="imgui_impl_vulkan:136",
+        parent=nil,
+        re_name="vardef_re"},
+      [15]={
+        item="\
+    const VkAllocationCallbacks* Allocator;",
+        locat="imgui_impl_vulkan:139",
+        parent=nil,
+        re_name="vardef_re"},
+      [16]={
+        item="\
+    void (*CheckVkResultFn)(VkResult err);",
+        locat="imgui_impl_vulkan:140",
+        parent=nil,
+        re_name="functype_re"},
+      [17]={
+        item="\
+    VkDeviceSize MinAllocationSize;",
+        locat="imgui_impl_vulkan:141",
+        parent=nil,
+        re_name="vardef_re"},
+      [18]={
+        item="\
+    VkShaderModuleCreateInfo CustomShaderVertCreateInfo;",
+        locat="imgui_impl_vulkan:146",
+        parent=nil,
+        re_name="vardef_re"},
+      [19]={
+        item="\
+    VkShaderModuleCreateInfo CustomShaderFragCreateInfo;",
+        locat="imgui_impl_vulkan:147",
+        parent=nil,
+        re_name="vardef_re"}},
+    item="\
+struct ImGui_ImplVulkan_InitInfo\
+{\
+    uint32_t ApiVersion;\
+    VkInstance Instance;\
+    VkPhysicalDevice PhysicalDevice;\
+    VkDevice Device;\
+    uint32_t QueueFamily;\
+    VkQueue Queue;\
+    VkDescriptorPool DescriptorPool;\
+    uint32_t DescriptorPoolSize;\
+    uint32_t MinImageCount;\
+    uint32_t ImageCount;\
+    VkPipelineCache PipelineCache;\
+    ImGui_ImplVulkan_PipelineInfo PipelineInfoMain;\
+    ImGui_ImplVulkan_PipelineInfo PipelineInfoForViewports;\
+    bool UseDynamicRendering;\
+    const VkAllocationCallbacks* Allocator;\
+    void (*CheckVkResultFn)(VkResult err);\
+    VkDeviceSize MinAllocationSize;\
+    VkShaderModuleCreateInfo CustomShaderVertCreateInfo;\
+    VkShaderModuleCreateInfo CustomShaderFragCreateInfo;\
+};",
+    locat="imgui_impl_vulkan:112",
+    name="ImGui_ImplVulkan_InitInfo",
+    re_name="struct_re"},
+  [78]={
+    item="\
+ bool ImGui_ImplVulkan_Init(ImGui_ImplVulkan_InitInfo* info);",
+    locat="imgui_impl_vulkan:151",
+    re_name="function_re"},
+  [79]={
+    item="\
+ void ImGui_ImplVulkan_Shutdown();",
+    locat="imgui_impl_vulkan:152",
+    re_name="function_re"},
+  [80]={
+    item="\
+ void ImGui_ImplVulkan_NewFrame();",
+    locat="imgui_impl_vulkan:153",
+    re_name="function_re"},
+  [81]={
+    item="\
+ void ImGui_ImplVulkan_RenderDrawData(ImDrawData* draw_data, VkCommandBuffer command_buffer, VkPipeline pipeline = ((void*)0));",
+    locat="imgui_impl_vulkan:154",
+    re_name="function_re"},
+  [82]={
+    item="\
+ void ImGui_ImplVulkan_SetMinImageCount(uint32_t min_image_count);",
+    locat="imgui_impl_vulkan:155",
+    re_name="function_re"},
+  [83]={
+    item="\
+ void ImGui_ImplVulkan_CreateMainPipeline(const ImGui_ImplVulkan_PipelineInfo* info);",
+    locat="imgui_impl_vulkan:160",
+    re_name="function_re"},
+  [84]={
+    item="\
+ void ImGui_ImplVulkan_UpdateTexture(ImTextureData* tex);",
+    locat="imgui_impl_vulkan:163",
+    re_name="function_re"},
+  [85]={
+    item="\
+ VkDescriptorSet ImGui_ImplVulkan_AddTexture(VkImageView image_view, VkImageLayout image_layout);",
+    locat="imgui_impl_vulkan:166",
+    re_name="function_re"},
+  [86]={
+    item="\
+ void ImGui_ImplVulkan_RemoveTexture(VkDescriptorSet descriptor_set);",
+    locat="imgui_impl_vulkan:167",
+    re_name="function_re"},
+  [87]={
+    item="\
+ bool ImGui_ImplVulkan_LoadFunctions(uint32_t api_version, PFN_vkVoidFunction(*loader_func)(const char* function_name, void* user_data), void* user_data = nullptr);",
+    locat="imgui_impl_vulkan:175",
+    re_name="function_re"},
+  [88]={
+    childs={
+      [1]={
+        item="\
+    VkCommandBuffer CommandBuffer;",
+        locat="imgui_impl_vulkan:183",
+        parent=nil,
+        re_name="vardef_re"},
+      [2]={
+        item="\
+    VkPipeline Pipeline;",
+        locat="imgui_impl_vulkan:184",
+        parent=nil,
+        re_name="vardef_re"},
+      [3]={
+        item="\
+    VkPipelineLayout PipelineLayout;",
+        locat="imgui_impl_vulkan:185",
+        parent=nil,
+        re_name="vardef_re"}},
+    item="\
+struct ImGui_ImplVulkan_RenderState\
+{\
+    VkCommandBuffer CommandBuffer;\
+    VkPipeline Pipeline;\
+    VkPipelineLayout PipelineLayout;\
+};",
+    locat="imgui_impl_vulkan:181",
+    name="ImGui_ImplVulkan_RenderState",
+    re_name="struct_re"},
+  [89]={
+    item="\
+ ImGui_ImplVulkan_RenderState* ImGui_ImplVulkan_GetRenderState();",
+    locat="imgui_impl_vulkan:187",
+    re_name="function_re"},
+  [90]={
+    item="\
+struct ImGui_ImplVulkanH_Frame;",
+    locat="imgui_impl_vulkan:210",
+    re_name="vardef_re"},
+  [91]={
+    item="\
+struct ImGui_ImplVulkanH_Window;",
+    locat="imgui_impl_vulkan:211",
+    re_name="vardef_re"},
+  [92]={
+    item="\
+ void ImGui_ImplVulkanH_CreateOrResizeWindow(VkInstance instance, VkPhysicalDevice physical_device, VkDevice device, ImGui_ImplVulkanH_Window* wd, uint32_t queue_family, const VkAllocationCallbacks* allocator, int w, int h, uint32_t min_image_count, VkImageUsageFlags image_usage);",
+    locat="imgui_impl_vulkan:214",
+    re_name="function_re"},
+  [93]={
+    item="\
+ void ImGui_ImplVulkanH_DestroyWindow(VkInstance instance, VkDevice device, ImGui_ImplVulkanH_Window* wd, const VkAllocationCallbacks* allocator);",
+    locat="imgui_impl_vulkan:215",
+    re_name="function_re"},
+  [94]={
+    item="\
+ VkSurfaceFormatKHR ImGui_ImplVulkanH_SelectSurfaceFormat(VkPhysicalDevice physical_device, VkSurfaceKHR surface, const VkFormat* request_formats, int request_formats_count, VkColorSpaceKHR request_color_space);",
+    locat="imgui_impl_vulkan:216",
+    re_name="function_re"},
+  [95]={
+    item="\
+ VkPresentModeKHR ImGui_ImplVulkanH_SelectPresentMode(VkPhysicalDevice physical_device, VkSurfaceKHR surface, const VkPresentModeKHR* request_modes, int request_modes_count);",
+    locat="imgui_impl_vulkan:217",
+    re_name="function_re"},
+  [96]={
+    item="\
+ VkPhysicalDevice ImGui_ImplVulkanH_SelectPhysicalDevice(VkInstance instance);",
+    locat="imgui_impl_vulkan:218",
+    re_name="function_re"},
+  [97]={
+    item="\
+ uint32_t ImGui_ImplVulkanH_SelectQueueFamilyIndex(VkPhysicalDevice physical_device);",
+    locat="imgui_impl_vulkan:219",
+    re_name="function_re"},
+  [98]={
+    item="\
+ int ImGui_ImplVulkanH_GetMinImageCountFromPresentMode(VkPresentModeKHR present_mode);",
+    locat="imgui_impl_vulkan:220",
+    re_name="function_re"},
+  [99]={
+    item="\
+ ImGui_ImplVulkanH_Window* ImGui_ImplVulkanH_GetWindowDataFromViewport(ImGuiViewport* viewport);",
+    locat="imgui_impl_vulkan:221",
+    re_name="function_re"},
+  [100]={
+    childs={
+      [1]={
+        item="\
+    VkCommandPool CommandPool;",
+        locat="imgui_impl_vulkan:228",
+        parent=nil,
+        re_name="vardef_re"},
+      [2]={
+        item="\
+    VkCommandBuffer CommandBuffer;",
+        locat="imgui_impl_vulkan:229",
+        parent=nil,
+        re_name="vardef_re"},
+      [3]={
+        item="\
+    VkFence Fence;",
+        locat="imgui_impl_vulkan:230",
+        parent=nil,
+        re_name="vardef_re"},
+      [4]={
+        item="\
+    VkImage Backbuffer;",
+        locat="imgui_impl_vulkan:231",
+        parent=nil,
+        re_name="vardef_re"},
+      [5]={
+        item="\
+    VkImageView BackbufferView;",
+        locat="imgui_impl_vulkan:232",
+        parent=nil,
+        re_name="vardef_re"},
+      [6]={
+        item="\
+    VkFramebuffer Framebuffer;",
+        locat="imgui_impl_vulkan:233",
+        parent=nil,
+        re_name="vardef_re"}},
+    item="\
+struct ImGui_ImplVulkanH_Frame\
+{\
+    VkCommandPool CommandPool;\
+    VkCommandBuffer CommandBuffer;\
+    VkFence Fence;\
+    VkImage Backbuffer;\
+    VkImageView BackbufferView;\
+    VkFramebuffer Framebuffer;\
+};",
+    locat="imgui_impl_vulkan:226",
+    name="ImGui_ImplVulkanH_Frame",
+    re_name="struct_re"},
+  [101]={
+    childs={
+      [1]={
+        item="\
+    VkSemaphore ImageAcquiredSemaphore;",
+        locat="imgui_impl_vulkan:238",
+        parent=nil,
+        re_name="vardef_re"},
+      [2]={
+        item="\
+    VkSemaphore RenderCompleteSemaphore;",
+        locat="imgui_impl_vulkan:239",
+        parent=nil,
+        re_name="vardef_re"}},
+    item="\
+struct ImGui_ImplVulkanH_FrameSemaphores\
+{\
+    VkSemaphore ImageAcquiredSemaphore;\
+    VkSemaphore RenderCompleteSemaphore;\
+};",
+    locat="imgui_impl_vulkan:236",
+    name="ImGui_ImplVulkanH_FrameSemaphores",
+    re_name="struct_re"},
+  [102]={
+    childs={
+      [1]={
+        item="\
+    bool UseDynamicRendering;",
+        locat="imgui_impl_vulkan:247",
+        parent=nil,
+        re_name="vardef_re"},
+      [2]={
+        item="\
+    VkSurfaceKHR Surface;",
+        locat="imgui_impl_vulkan:248",
+        parent=nil,
+        re_name="vardef_re"},
+      [3]={
+        item="\
+    VkSurfaceFormatKHR SurfaceFormat;",
+        locat="imgui_impl_vulkan:249",
+        parent=nil,
+        re_name="vardef_re"},
+      [4]={
+        item="\
+    VkPresentModeKHR PresentMode;",
+        locat="imgui_impl_vulkan:250",
+        parent=nil,
+        re_name="vardef_re"},
+      [5]={
+        item="\
+    VkAttachmentDescription AttachmentDesc;",
+        locat="imgui_impl_vulkan:251",
+        parent=nil,
+        re_name="vardef_re"},
+      [6]={
+        item="\
+    VkClearValue ClearValue;",
+        locat="imgui_impl_vulkan:252",
+        parent=nil,
+        re_name="vardef_re"},
+      [7]={
+        item="\
+    int Width;",
+        locat="imgui_impl_vulkan:255",
+        parent=nil,
+        re_name="vardef_re"},
+      [8]={
+        item="\
+    int Height;",
+        locat="imgui_impl_vulkan:256",
+        parent=nil,
+        re_name="vardef_re"},
+      [9]={
+        item="\
+    VkSwapchainKHR Swapchain;",
+        locat="imgui_impl_vulkan:257",
+        parent=nil,
+        re_name="vardef_re"},
+      [10]={
+        item="\
+    VkRenderPass RenderPass;",
+        locat="imgui_impl_vulkan:258",
+        parent=nil,
+        re_name="vardef_re"},
+      [11]={
+        item="\
+    uint32_t FrameIndex;",
+        locat="imgui_impl_vulkan:259",
+        parent=nil,
+        re_name="vardef_re"},
+      [12]={
+        item="\
+    uint32_t ImageCount;",
+        locat="imgui_impl_vulkan:260",
+        parent=nil,
+        re_name="vardef_re"},
+      [13]={
+        item="\
+    uint32_t SemaphoreCount;",
+        locat="imgui_impl_vulkan:261",
+        parent=nil,
+        re_name="vardef_re"},
+      [14]={
+        item="\
+    uint32_t SemaphoreIndex;",
+        locat="imgui_impl_vulkan:262",
+        parent=nil,
+        re_name="vardef_re"},
+      [15]={
+        item="\
+    ImVector<ImGui_ImplVulkanH_Frame> Frames;",
+        locat="imgui_impl_vulkan:263",
+        parent=nil,
+        re_name="vardef_re"},
+      [16]={
+        item="\
+    ImVector<ImGui_ImplVulkanH_FrameSemaphores> FrameSemaphores;",
+        locat="imgui_impl_vulkan:264",
+        parent=nil,
+        re_name="vardef_re"},
+      [17]={
+        item="\
+    ImGui_ImplVulkanH_Window()\
+    {\
+        memset((void*)this, 0, sizeof(*this));\
+        PresentMode = VK_PRESENT_MODE_MAX_ENUM_KHR;\
+        AttachmentDesc.format = VK_FORMAT_UNDEFINED;\
+        AttachmentDesc.samples = VK_SAMPLE_COUNT_1_BIT;\
+        AttachmentDesc.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;\
+        AttachmentDesc.storeOp = VK_ATTACHMENT_STORE_OP_STORE;\
+        AttachmentDesc.stencilLoadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE;\
+        AttachmentDesc.stencilStoreOp = VK_ATTACHMENT_STORE_OP_DONT_CARE;\
+        AttachmentDesc.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;\
+        AttachmentDesc.finalLayout = VK_IMAGE_LAYOUT_PRESENT_SRC_KHR;\
+    }",
+        locat="imgui_impl_vulkan:266",
+        parent=nil,
+        re_name="functionD_re"}},
+    item="\
+struct ImGui_ImplVulkanH_Window\
+{\
+    bool UseDynamicRendering;\
+    VkSurfaceKHR Surface;\
+    VkSurfaceFormatKHR SurfaceFormat;\
+    VkPresentModeKHR PresentMode;\
+    VkAttachmentDescription AttachmentDesc;\
+    VkClearValue ClearValue;\
+    int Width;\
+    int Height;\
+    VkSwapchainKHR Swapchain;\
+    VkRenderPass RenderPass;\
+    uint32_t FrameIndex;\
+    uint32_t ImageCount;\
+    uint32_t SemaphoreCount;\
+    uint32_t SemaphoreIndex;\
+    ImVector<ImGui_ImplVulkanH_Frame> Frames;\
+    ImVector<ImGui_ImplVulkanH_FrameSemaphores> FrameSemaphores;\
+    ImGui_ImplVulkanH_Window()\
+    {\
+        memset((void*)this, 0, sizeof(*this));\
+        PresentMode = VK_PRESENT_MODE_MAX_ENUM_KHR;\
+        AttachmentDesc.format = VK_FORMAT_UNDEFINED;\
+        AttachmentDesc.samples = VK_SAMPLE_COUNT_1_BIT;\
+        AttachmentDesc.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;\
+        AttachmentDesc.storeOp = VK_ATTACHMENT_STORE_OP_STORE;\
+        AttachmentDesc.stencilLoadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE;\
+        AttachmentDesc.stencilStoreOp = VK_ATTACHMENT_STORE_OP_DONT_CARE;\
+        AttachmentDesc.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;\
+        AttachmentDesc.finalLayout = VK_IMAGE_LAYOUT_PRESENT_SRC_KHR;\
+    }\
+};",
+    locat="imgui_impl_vulkan:244",
+    name="ImGui_ImplVulkanH_Window",
+    re_name="struct_re"}}
 t[30].childs[1].parent=t[30]
 t[30].childs[2].parent=t[30]
 t[30].childs[3].parent=t[30]
 t[30].childs[4].parent=t[30]
+t[76].childs[1].parent=t[76]
+t[76].childs[2].parent=t[76]
+t[76].childs[3].parent=t[76]
+t[76].childs[4].parent=t[76]
+t[76].childs[5].parent=t[76]
+t[76].childs[6].parent=t[76]
+t[77].childs[1].parent=t[77]
+t[77].childs[2].parent=t[77]
+t[77].childs[3].parent=t[77]
+t[77].childs[4].parent=t[77]
+t[77].childs[5].parent=t[77]
+t[77].childs[6].parent=t[77]
+t[77].childs[7].parent=t[77]
+t[77].childs[8].parent=t[77]
+t[77].childs[9].parent=t[77]
+t[77].childs[10].parent=t[77]
+t[77].childs[11].parent=t[77]
+t[77].childs[12].parent=t[77]
+t[77].childs[13].parent=t[77]
+t[77].childs[14].parent=t[77]
+t[77].childs[15].parent=t[77]
+t[77].childs[16].parent=t[77]
+t[77].childs[17].parent=t[77]
+t[77].childs[18].parent=t[77]
+t[77].childs[19].parent=t[77]
+t[88].childs[1].parent=t[88]
+t[88].childs[2].parent=t[88]
+t[88].childs[3].parent=t[88]
+t[100].childs[1].parent=t[100]
+t[100].childs[2].parent=t[100]
+t[100].childs[3].parent=t[100]
+t[100].childs[4].parent=t[100]
+t[100].childs[5].parent=t[100]
+t[100].childs[6].parent=t[100]
+t[101].childs[1].parent=t[101]
+t[101].childs[2].parent=t[101]
+t[102].childs[1].parent=t[102]
+t[102].childs[2].parent=t[102]
+t[102].childs[3].parent=t[102]
+t[102].childs[4].parent=t[102]
+t[102].childs[5].parent=t[102]
+t[102].childs[6].parent=t[102]
+t[102].childs[7].parent=t[102]
+t[102].childs[8].parent=t[102]
+t[102].childs[9].parent=t[102]
+t[102].childs[10].parent=t[102]
+t[102].childs[11].parent=t[102]
+t[102].childs[12].parent=t[102]
+t[102].childs[13].parent=t[102]
+t[102].childs[14].parent=t[102]
+t[102].childs[15].parent=t[102]
+t[102].childs[16].parent=t[102]
+t[102].childs[17].parent=t[102]
  return t
